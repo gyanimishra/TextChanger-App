@@ -7,13 +7,13 @@ It is a Text-Changer App where user can Edit their text like, Smaller to Capital
 
 
 
-<a href="https://app.netlify.com/teams/gyan12082000/overview">![Logo](https://www.reviewsxp.com/blog/wp-content/uploads/2020/05/Anthropologie-850x491.png)</a>
+<a href="https://app.netlify.com/teams/gyan12082000/overview">![Logo]("https://reactjsexample.com/content/images/2021/10/Screenshot--35-.png")</a>
+
+<a href="https://app.netlify.com/teams/gyan12082000/overview">![Logo]("https://reactjsexample.com/content/images/2021/10/Screenshot--36-.png")</a>
 
 
 
 
-<a href="https://reactjsexample.com/content/images/2021/10/Screenshot--35-.png"</a>
-<a href="https://reactjsexample.com/content/images/2021/10/Screenshot--36-.png"</a>
 
 
 
