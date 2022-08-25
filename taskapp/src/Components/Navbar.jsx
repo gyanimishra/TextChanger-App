@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 const Navbar = (props) => {
  console.log(props.mode)
   return (
@@ -12,18 +12,21 @@ const Navbar = (props) => {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="/">Home</a>
+            {/* <a className="nav-link active" aria-current="page" href="/">Home</a> */}
+            <Link  to='/' className="nav-link active" aria-current="page"  >Home</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/">About</a>
+            <a className="nav-link" href="https://gyanprakashportfolio.netlify.app/">About</a>
+           
           </li> 
         </ul>
-       
-      </div>
-      <div className={`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
+        <div className={`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
   <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={props.handletoggle}/>
   <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{props.mode==='light'?'Dark Mode':'Light Mode'}</label>
 </div>
+       
+      </div>
+    
     </div>
   </nav>
   )

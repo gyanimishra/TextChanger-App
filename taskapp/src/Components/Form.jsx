@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import style from "./Form.module.css";
+import Typical from 'react-typical'
 
 const Form = (props) => {
 
@@ -43,24 +44,41 @@ const handleRemove =()=>{
 
   return (
     <div style={{color:props.mode ==='dark'?'white':'black'}}  >
-      <h1>{props.heading}</h1>
+           <div id="typically">
+       <h1 id="typicallyh1">
+                         
+                            <Typical
+                            loop={Infinity}
+                            steps={[
+                                "Enter The Text Here... 💻",
+                                7000,
+                                "For See The Result! 🖥",
+                                6000,
+                                "Text-Changer 💻",
+                                5000,
+                                "Created By Gyan!💻",
+                                4000,
+                            ]}
+                            />
+                        </h1>
+       </div>
+      
       
       <div className="mb-3" >
         <textarea id="myBox"  rows="8" className='form-control' value={text} onChange={handlechange} style={{backgroundColor: props.mode==='dark'?'#13466e':'white', color: props.mode==='dark'?'white':'#042743'}}></textarea>
       </div>
-      <div  className={style.btne}>
-      <button className='btn btn-primary' onClick={handleclick}>Convert to UpperCase</button>
-      <button className='btn btn-primary' onClick={handleSmallclick}>Convert to SmallerCase</button>
-      <button className='btn btn-primary' onClick={handleClear}>Clear</button>
+      <div  >
+      <button disabled={text.length===0}   className="btn btn-primary mx-1 my-1" onClick={handleclick}>Convert to UpperCase</button>
+      <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleSmallclick}>Convert to SmallerCase</button>
+      <button  disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleClear}>Clear</button>
     
-      <button className='btn btn-primary' onClick={handlecopy} >Copy Text</button>
-      <button className='btn btn-primary' onClick={handleRemove} >Remove ExtraSpace</button>
+      <button  disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handlecopy} >Copy Text</button>
+      <button  disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleRemove} >Remove ExtraSpace</button>
       </div>
 
       <div className="container my-3">
         <h2>Text Details</h2>
-        var 
-        <h6>{text.split(" ").length} words and {text.length} characters</h6>
+        <h6>{text.split(" ").filter((ele)=>{return ele.length !== 0}).length} words and {text.length} characters</h6>
         <h6>{0.008*text.split(" ").length} minutes read</h6>
 
         <h2>Preview</h2>
